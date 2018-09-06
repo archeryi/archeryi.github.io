@@ -6,7 +6,8 @@ tags: others
 
 ## 搭建流程
 
-### 注册Github并且新建repository，name：username.github.io
+### 注册Github
+新建repository，name：username.github.io
 
 ### 环境准备
 安装Git，node以及Hexo,推荐用Homebrew进行安装，如果Homebrew安装出错，可以直接去[node官网](https://nodejs.org/en/)下载mac版安装包。
