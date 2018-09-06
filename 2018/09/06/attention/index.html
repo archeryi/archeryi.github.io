@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="本文主要是对Deep Learning在NLP领域当中的一些主要应用和相关技术进行简单的罗列，不作深入考究。 NLP的主要技术应用基础技术这一部分的技术主要是中文分词，词性标注，命名实体识别等，这部分的技术往往是其他NLP技术的基础部分。 核心技术基于基础的NLP技术，能够实现文本的分类，信息的检索，机器翻译等核心NLP技术. 深度学习在NLP应用的主要技术Word embeddings近年来，w">
+<meta name="description" content="Attention主要是在seq2seq中将encoder隐层的各个状态通过矩阵相乘作为当前decoder的输入，其基本形式如下，根据$f_{att}$函数的不同有四种不同的形式。$c_{i} = \sum_{j}a_{i,j}s_{j}$$a_{i} = softmax(f_{att}(h_{i}, s_{j}))$  ##">
 <meta name="keywords" content="NLP, Machine learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DeepLearning在NLP中的应用">
-<meta property="og:url" content="http://yoursite.com/2018/09/06/DeepLearning在NLP中的应用/index.html">
+<meta property="og:title" content="Attention的四种形式">
+<meta property="og:url" content="http://yoursite.com/2018/09/06/attention/index.html">
 <meta property="og:site_name" content="机场背">
-<meta property="og:description" content="本文主要是对Deep Learning在NLP领域当中的一些主要应用和相关技术进行简单的罗列，不作深入考究。 NLP的主要技术应用基础技术这一部分的技术主要是中文分词，词性标注，命名实体识别等，这部分的技术往往是其他NLP技术的基础部分。 核心技术基于基础的NLP技术，能够实现文本的分类，信息的检索，机器翻译等核心NLP技术. 深度学习在NLP应用的主要技术Word embeddings近年来，w">
+<meta property="og:description" content="Attention主要是在seq2seq中将encoder隐层的各个状态通过矩阵相乘作为当前decoder的输入，其基本形式如下，根据$f_{att}$函数的不同有四种不同的形式。$c_{i} = \sum_{j}a_{i,j}s_{j}$$a_{i} = softmax(f_{att}(h_{i}, s_{j}))$  ##">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-06T09:05:33.981Z">
+<meta property="og:updated_time" content="2018-09-06T09:39:05.457Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DeepLearning在NLP中的应用">
-<meta name="twitter:description" content="本文主要是对Deep Learning在NLP领域当中的一些主要应用和相关技术进行简单的罗列，不作深入考究。 NLP的主要技术应用基础技术这一部分的技术主要是中文分词，词性标注，命名实体识别等，这部分的技术往往是其他NLP技术的基础部分。 核心技术基于基础的NLP技术，能够实现文本的分类，信息的检索，机器翻译等核心NLP技术. 深度学习在NLP应用的主要技术Word embeddings近年来，w">
+<meta name="twitter:title" content="Attention的四种形式">
+<meta name="twitter:description" content="Attention主要是在seq2seq中将encoder隐层的各个状态通过矩阵相乘作为当前decoder的输入，其基本形式如下，根据$f_{att}$函数的不同有四种不同的形式。$c_{i} = \sum_{j}a_{i,j}s_{j}$$a_{i} = softmax(f_{att}(h_{i}, s_{j}))$  ##">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/06/DeepLearning在NLP中的应用/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/06/attention/"/>
 
 
 
 
 
-  <title>DeepLearning在NLP中的应用 | 机场背</title>
+  <title>Attention的四种形式 | 机场背</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/06/DeepLearning在NLP中的应用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/06/attention/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Archeryi">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">DeepLearning在NLP中的应用</h1>
+          <h1 class="post-title" itemprop="name headline">Attention的四种形式</h1>
         
 
         <div class="post-meta">
@@ -282,7 +282,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-06T16:46:51+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-06T17:20:04+08:00">
                 2018-09-06
               </time>
             
@@ -305,8 +305,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/nlp/" itemprop="url" rel="index">
-                    <span itemprop="name">nlp</span>
+                  <a href="/categories/NLP/" itemprop="url" rel="index">
+                    <span itemprop="name">NLP</span>
                   </a>
                 </span>
 
@@ -342,11 +342,9 @@
       
 
       
-        <p>本文主要是对Deep Learning在NLP领域当中的一些主要应用和相关技术进行简单的罗列，不作深入考究。</p>
-<h2 id="NLP的主要技术应用"><a href="#NLP的主要技术应用" class="headerlink" title="NLP的主要技术应用"></a>NLP的主要技术应用</h2><h3 id="基础技术"><a href="#基础技术" class="headerlink" title="基础技术"></a>基础技术</h3><p>这一部分的技术主要是中文分词，词性标注，命名实体识别等，这部分的技术往往是其他NLP技术的基础部分。</p>
-<h3 id="核心技术"><a href="#核心技术" class="headerlink" title="核心技术"></a>核心技术</h3><p>基于基础的NLP技术，能够实现文本的分类，信息的检索，机器翻译等核心NLP技术.</p>
-<h2 id="深度学习在NLP应用的主要技术"><a href="#深度学习在NLP应用的主要技术" class="headerlink" title="深度学习在NLP应用的主要技术"></a>深度学习在NLP应用的主要技术</h2><h3 id="Word-embeddings"><a href="#Word-embeddings" class="headerlink" title="Word embeddings"></a>Word embeddings</h3><p>近年来，word embedding已经成为了深度学习在NLP领域中最成功的应用。</p>
-<h3 id="RNN"><a href="#RNN" class="headerlink" title="RNN"></a>RNN</h3><h3 id="CNN"><a href="#CNN" class="headerlink" title="CNN"></a>CNN</h3><h3 id="Attention"><a href="#Attention" class="headerlink" title="Attention"></a>Attention</h3>
+        <p>Attention主要是在seq2seq中将encoder隐层的各个状态通过矩阵相乘作为当前decoder的输入，其基本形式如下，根据$f_{att}$函数的不同有四种不同的形式。<br>$c_{i} = \sum_{j}a_{i,j}s_{j}$<br>$a_{i} = softmax(f_{att}(h_{i}, s_{j}))$ </p>
+<p>##</p>
+
       
     </div>
     
@@ -430,17 +428,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -495,22 +484,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NLP的主要技术应用"><span class="nav-number">1.</span> <span class="nav-text">NLP的主要技术应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础技术"><span class="nav-number">1.1.</span> <span class="nav-text">基础技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#核心技术"><span class="nav-number">1.2.</span> <span class="nav-text">核心技术</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度学习在NLP应用的主要技术"><span class="nav-number">2.</span> <span class="nav-text">深度学习在NLP应用的主要技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Word-embeddings"><span class="nav-number">2.1.</span> <span class="nav-text">Word embeddings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RNN"><span class="nav-number">2.2.</span> <span class="nav-text">RNN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CNN"><span class="nav-number">2.3.</span> <span class="nav-text">CNN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Attention"><span class="nav-number">2.4.</span> <span class="nav-text">Attention</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -712,6 +685,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/06/DeepLearning在NLP中的应用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/06/attention/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Archeryi">
@@ -272,7 +272,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/06/DeepLearning在NLP中的应用/" itemprop="url">DeepLearning在NLP中的应用</a></h1>
+                <a class="post-title-link" href="/2018/09/06/attention/" itemprop="url">Attention的四种形式</a></h1>
         
 
         <div class="post-meta">
@@ -284,7 +284,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-06T16:46:51+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-06T17:20:04+08:00">
                 2018-09-06
               </time>
             
@@ -307,8 +307,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/nlp/" itemprop="url" rel="index">
-                    <span itemprop="name">nlp</span>
+                  <a href="/categories/NLP/" itemprop="url" rel="index">
+                    <span itemprop="name">NLP</span>
                   </a>
                 </span>
 
@@ -346,12 +346,11 @@
       
         
           
-          本文主要是对Deep Learning在NLP领域当中的一些主要应用和相关技术进行简单的罗列，不作深入考究。
-NLP的主要技术应用基础技术这一部分的技术主要是中文分词，词性标注，命名实体识别等，这部分
+          Attention主要是在seq2seq中将encoder隐层的各个状态通过矩阵相乘作为当前decoder的输入，其基本形式如下，根据$f_{att}$函数的不同有四种不同的形式。$c_{i} = \
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/09/06/DeepLearning在NLP中的应用/#more" rel="contents">
+            <a class="btn" href="/2018/09/06/attention/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -820,6 +819,28 @@ NLP的主要技术应用基础技术这一部分的技术主要是中文分词�
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
