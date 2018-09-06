@@ -1,7 +1,8 @@
 ---
 title: Hexo+Github搭建个人静态博客(MAC版)
 date: 2018-09-05 20:02:49
-tags: others
+categories: 
+- web
 ---
 
 ## 搭建流程
