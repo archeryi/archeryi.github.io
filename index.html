@@ -79,13 +79,17 @@
 
 
 
+<meta name="description" content="Just for free!">
+<meta name="keywords" content="NLP, Machine learning">
 <meta property="og:type" content="website">
 <meta property="og:title" content="机场背">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="机场背">
+<meta property="og:description" content="Just for free!">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机场背">
+<meta name="twitter:description" content="Just for free!">
 
 
 
@@ -229,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/05/Just-test/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/05/Hexo+Github/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="archeryi">
@@ -248,7 +252,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/05/Just-test/" itemprop="url">Just test</a></h1>
+                <a class="post-title-link" href="/2018/09/05/Hexo+Github/" itemprop="url">Hexo+Github搭建个人静态博客(MAC版)</a></h1>
         
 
         <div class="post-meta">
@@ -300,7 +304,10 @@
       
         
           
-            <h2 id="小标题"><a href="#小标题" class="headerlink" title="小标题"></a>小标题</h2>
+            <h2 id="搭建流程"><a href="#搭建流程" class="headerlink" title="搭建流程"></a>搭建流程</h2><h3 id="注册Github并且新建repository，name：username-github-io"><a href="#注册Github并且新建repository，name：username-github-io" class="headerlink" title="注册Github并且新建repository，name：username.github.io"></a>注册Github并且新建repository，name：username.github.io</h3><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><p>安装Git，node以及Hexo,推荐用Homebrew进行安装，如果Homebrew安装出错，可以直接去<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node官网</a>下载mac版安装包。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ brew install git</span><br><span class="line">$ brew install node</span><br><span class="line">$ nmp install -g hexo</span><br></pre></td></tr></table></figure>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> github.com/username/username.github.io</span><br><span class="line">$ git checkout -b hexo</span><br><span class="line">$ hexo init</span><br><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ hexo new <span class="string">"newpost"</span></span><br><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate -d</span><br></pre></td></tr></table></figure>
+
           
         
       
@@ -499,7 +506,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">archeryi</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">Just for free!</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -517,6 +524,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>
