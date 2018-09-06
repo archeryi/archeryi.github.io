@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="搭建流程注册Github新建repository，name：username.github.io 环境准备安装Git，node以及Hexo,推荐用Homebrew进行安装，如果Homebrew安装出错，可以直接去node官网下载mac版安装包。 123$ brew install git$ brew install node$ nmp install -g hexo 部署1234567$ git">
+<meta name="description" content="本文主要用于测试静态博客的搭建方式以及设置。">
 <meta name="keywords" content="NLP, Machine learning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo+Github搭建个人静态博客(MAC版)">
 <meta property="og:url" content="http://yoursite.com/2018/09/05/Hexo+Github/index.html">
 <meta property="og:site_name" content="机场背">
-<meta property="og:description" content="搭建流程注册Github新建repository，name：username.github.io 环境准备安装Git，node以及Hexo,推荐用Homebrew进行安装，如果Homebrew安装出错，可以直接去node官网下载mac版安装包。 123$ brew install git$ brew install node$ nmp install -g hexo 部署1234567$ git">
+<meta property="og:description" content="本文主要用于测试静态博客的搭建方式以及设置。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-06T02:48:48.464Z">
+<meta property="og:updated_time" content="2018-09-06T03:20:51.697Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Github搭建个人静态博客(MAC版)">
-<meta name="twitter:description" content="搭建流程注册Github新建repository，name：username.github.io 环境准备安装Git，node以及Hexo,推荐用Homebrew进行安装，如果Homebrew安装出错，可以直接去node官网下载mac版安装包。 123$ brew install git$ brew install node$ nmp install -g hexo 部署1234567$ git">
+<meta name="twitter:description" content="本文主要用于测试静态博客的搭建方式以及设置。">
 
 
 
@@ -342,7 +342,8 @@
       
 
       
-        <h2 id="搭建流程"><a href="#搭建流程" class="headerlink" title="搭建流程"></a>搭建流程</h2><h3 id="注册Github"><a href="#注册Github" class="headerlink" title="注册Github"></a>注册Github</h3><p>新建repository，name：username.github.io</p>
+        <p>本文主要用于测试静态博客的搭建方式以及设置。<br><a id="more"></a></p>
+<h2 id="搭建流程"><a href="#搭建流程" class="headerlink" title="搭建流程"></a>搭建流程</h2><h3 id="注册Github"><a href="#注册Github" class="headerlink" title="注册Github"></a>注册Github</h3><p>新建repository，name：username.github.io</p>
 <h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><p>安装Git，node以及Hexo,推荐用Homebrew进行安装，如果Homebrew安装出错，可以直接去<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node官网</a>下载mac版安装包。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ brew install git</span><br><span class="line">$ brew install node</span><br><span class="line">$ nmp install -g hexo</span><br></pre></td></tr></table></figure>
 <h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> github.com/username/username.github.io</span><br><span class="line">$ git checkout -b hexo</span><br><span class="line">$ hexo init</span><br><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ hexo new <span class="string">"newpost"</span></span><br><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate -d</span><br></pre></td></tr></table></figure>
