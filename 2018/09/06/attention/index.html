@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Attention主要是在seq2seq中将encoder隐层的各个状态通过矩阵相乘作为当前decoder的输入，其基本形式如下，根据$f_{att}$函数的不同有四种不同的形式。$c_{i} = \sum_{j}a_{i,j}s_{j}$$a_{i} = softmax(f_{att}(h_{i}, s_{j}))$  ##">
+<meta name="description" content="Attention主要用于关联Seq2Seq模型中的encoder states， 也能用于关联序列模型的past states。通过attention，能够基于隐层状态向量$s_{1},…,s_{n}$生成一个向量$c_{i}$，然后用这个向量和当前隐层向量$h_{i}$进行prediction。向量$c_{i}$的计算方式如下：$c_{i} = \sum_{j}a_{ij}s_{j}$$a_{">
 <meta name="keywords" content="NLP, Machine learning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Attention的四种形式">
 <meta property="og:url" content="http://yoursite.com/2018/09/06/attention/index.html">
 <meta property="og:site_name" content="机场背">
-<meta property="og:description" content="Attention主要是在seq2seq中将encoder隐层的各个状态通过矩阵相乘作为当前decoder的输入，其基本形式如下，根据$f_{att}$函数的不同有四种不同的形式。$c_{i} = \sum_{j}a_{i,j}s_{j}$$a_{i} = softmax(f_{att}(h_{i}, s_{j}))$  ##">
+<meta property="og:description" content="Attention主要用于关联Seq2Seq模型中的encoder states， 也能用于关联序列模型的past states。通过attention，能够基于隐层状态向量$s_{1},…,s_{n}$生成一个向量$c_{i}$，然后用这个向量和当前隐层向量$h_{i}$进行prediction。向量$c_{i}$的计算方式如下：$c_{i} = \sum_{j}a_{ij}s_{j}$$a_{">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-06T09:39:05.457Z">
+<meta property="og:updated_time" content="2018-09-06T10:03:05.165Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Attention的四种形式">
-<meta name="twitter:description" content="Attention主要是在seq2seq中将encoder隐层的各个状态通过矩阵相乘作为当前decoder的输入，其基本形式如下，根据$f_{att}$函数的不同有四种不同的形式。$c_{i} = \sum_{j}a_{i,j}s_{j}$$a_{i} = softmax(f_{att}(h_{i}, s_{j}))$  ##">
+<meta name="twitter:description" content="Attention主要用于关联Seq2Seq模型中的encoder states， 也能用于关联序列模型的past states。通过attention，能够基于隐层状态向量$s_{1},…,s_{n}$生成一个向量$c_{i}$，然后用这个向量和当前隐层向量$h_{i}$进行prediction。向量$c_{i}$的计算方式如下：$c_{i} = \sum_{j}a_{ij}s_{j}$$a_{">
 
 
 
@@ -342,8 +342,11 @@
       
 
       
-        <p>Attention主要是在seq2seq中将encoder隐层的各个状态通过矩阵相乘作为当前decoder的输入，其基本形式如下，根据$f_{att}$函数的不同有四种不同的形式。<br>$c_{i} = \sum_{j}a_{i,j}s_{j}$<br>$a_{i} = softmax(f_{att}(h_{i}, s_{j}))$ </p>
-<p>##</p>
+        <p>Attention主要用于关联Seq2Seq模型中的encoder states， 也能用于关联序列模型的past states。通过attention，能够基于隐层状态向量$s_{1},…,s_{n}$生成一个向量$c_{i}$，然后用这个向量和当前隐层向量$h_{i}$进行prediction。向量$c_{i}$的计算方式如下：<br>$c_{i} = \sum_{j}a_{ij}s_{j}$<br>$a_{i} = softmax(f_{att}(h_{i}, s_{j}))$<br>根据$f_{att}$函数的不同，attention大体有四种主要的形式。 </p>
+<h2 id="Additive-attention"><a href="#Additive-attention" class="headerlink" title="Additive attention"></a>Additive attention</h2><p>$f_{att}(h_{i}, s_{j}) = v_{a}^{T}tanh(W_{a}[h_{i};s_{j}$<br>或者：<br>$f_{att}(h_{i}, s_{j}) = v_{a}^{T}tanh(W_{1}h_{i} + W_{2}s_{j})$</p>
+<h2 id="Multoplicative-attention"><a href="#Multoplicative-attention" class="headerlink" title="Multoplicative attention"></a>Multoplicative attention</h2><p>$f_{att}(h_{i}, s_{j}) = h_{i}^{T}W_{a}s_{j}$</p>
+<h2 id="Self-attention"><a href="#Self-attention" class="headerlink" title="Self-attention"></a>Self-attention</h2><p>$f_{att}(h_{i}, s_{j}) = h_{i}^{T}W_{a}h_{i}$</p>
+<h2 id="Key-value-attention"><a href="#Key-value-attention" class="headerlink" title="Key-value attention"></a>Key-value attention</h2><p>不想写了</p>
 
       
     </div>
@@ -428,8 +431,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -484,6 +496,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Additive-attention"><span class="nav-number">1.</span> <span class="nav-text">Additive attention</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Multoplicative-attention"><span class="nav-number">2.</span> <span class="nav-text">Multoplicative attention</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Self-attention"><span class="nav-number">3.</span> <span class="nav-text">Self-attention</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Key-value-attention"><span class="nav-number">4.</span> <span class="nav-text">Key-value attention</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
