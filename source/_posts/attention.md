@@ -2,7 +2,8 @@
 title: Attention的四种形式
 date: 2018-09-06 17:20:04
 tags:
-categories: NLP
+categories:
+- NLP
 mathjax: true
 ---
 Attention主要用于关联Seq2Seq模型中的encoder states， 也能用于关联序列模型的past states。通过attention，能够基于隐层状态向量$s\_{1},...,s\_{n}$生成一个向量$c\_{i}$，然后用这个向量和当前隐层向量$h\_{i}$进行prediction。向量$c\_{i}$的计算方式如下：
